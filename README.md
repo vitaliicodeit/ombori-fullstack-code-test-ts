@@ -38,7 +38,7 @@ Before submitting your result please make sure that:
 
 # TODO
 
-- [ ] Fix 3 dependency vulnerabilities with critical severity and 17 with high severity (run `npm audit`);
+- [ ] Fix 6 dependency vulnerabilities with high severity (run `npm audit`);
 
 # Important comments
 
