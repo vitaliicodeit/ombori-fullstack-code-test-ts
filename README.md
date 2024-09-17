@@ -44,3 +44,5 @@ Before submitting your result please make sure that:
 
 1. SFUIText Font Family is not licensed to be used for web applications
    development (https://forums.developer.apple.com/forums/thread/733267), so Roboto font is used.
+2. For testing purposes, a three-second delay was added to requests, which allows you to see the main loader for three
+   seconds, as specified in the requirements, and additionally see the spinner for infinite scrolling.
