@@ -42,5 +42,5 @@ Before submitting your result please make sure that:
 
 # Important comments
 
-1. Font Family is not licensed to be used for web applications
+1. SFUIText Font Family is not licensed to be used for web applications
    development (https://forums.developer.apple.com/forums/thread/733267), so Roboto font is used.
