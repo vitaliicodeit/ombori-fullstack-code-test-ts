@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client';
 
 import { App } from './app';
 
+import 'normalize.css';
+import './styles/index.scss';
+
 const rootNode = document.getElementById('root');
 
 if (rootNode) {

@@ -1,0 +1,24 @@
+@import '../../../styles/variables';
+
+.Button {
+  display: inline-block;
+  padding: 1em 2em;
+  font-size: 2em;
+  color: #fff;
+  background-color: $mainGreen;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($mainGreen, 5%);
+  }
+
+  &--disabled {
+    background-color: #d6d6d6;
+    color: #9a9a9a;
+    cursor: not-allowed;
+  }
+}
