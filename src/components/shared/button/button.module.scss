@@ -17,8 +17,8 @@
   }
 
   &--disabled {
-    background-color: #d6d6d6;
-    color: #9a9a9a;
+    background-color: $greyBackground;
+    color: $greyDisabled;
     cursor: not-allowed;
   }
 }
