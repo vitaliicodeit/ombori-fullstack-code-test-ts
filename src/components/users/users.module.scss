@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+
+.Users {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+
+  &__Item {
+    margin-left: 1.6rem;
+    border-bottom: 0.1rem solid $greyBorder;
+  }
+
+  &__Spinner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__NoItemsLeft {
+    position: relative;
+    padding: 1.5rem 2.4rem;
+    background-color: $greyBackground;
+    text-align: center;
+
+    @include paragraph;
+  }
+}

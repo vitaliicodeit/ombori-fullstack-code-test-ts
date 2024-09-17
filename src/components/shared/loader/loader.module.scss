@@ -36,7 +36,7 @@
     width: $initialSize;
     opacity: $opacityFrom;
 
-    @include pulse-animation($initialSize, $maxSize, $opacityFrom, 0.005);
+    @include pulseAnimation($initialSize, $maxSize, $opacityFrom, 0.005);
   }
 
   &__Inner {

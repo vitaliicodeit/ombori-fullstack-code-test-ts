@@ -11,7 +11,7 @@ export const ApplicationCrash: FC = () => {
 
   return (
     <div className={styles.CrashScreen}>
-      <p>Something went wrong!</p>
+      <p className={styles.CrashScreen__Text}>Something went wrong!</p>
       <Button onClick={handleReload}>Reload</Button>
     </div>
   );

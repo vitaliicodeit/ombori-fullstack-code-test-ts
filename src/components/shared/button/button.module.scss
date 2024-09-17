@@ -1,16 +1,17 @@
 @import '../../../styles/variables';
+@import '../../../styles/typography';
 
 .Button {
   display: inline-block;
   padding: 1em 2em;
-  font-size: 2em;
-  color: #fff;
   background-color: $mainGreen;
   border: none;
   border-radius: 0.4em;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease;
+
+  @include buttonText;
 
   &:hover {
     background-color: lighten($mainGreen, 5%);

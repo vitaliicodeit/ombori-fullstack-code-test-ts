@@ -1,0 +1,47 @@
+@import 'variables';
+
+@mixin typography {
+  font-family: $mainFont;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin title {
+  @include typography;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: normal;
+  color: $black;
+}
+
+@mixin cardHeader {
+  @include typography;
+
+  font-size: 1.6rem;
+  color: $black;
+}
+
+@mixin paragraph {
+  @include typography;
+
+  font-size: 1.6rem;
+  color: $black;
+}
+
+@mixin buttonText {
+  @include typography;
+
+  font-size: 2em;
+  color: $white;
+}
+
+@mixin error {
+  @include typography;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $errorRed;
+}

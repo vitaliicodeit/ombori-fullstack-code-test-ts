@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.ErrorMessage {
+  position: relative;
+  padding: 1.5rem 2.4rem;
+  width: 100%;
+  text-align: center;
+  background-color: $white;
+
+  @include error;
+}
