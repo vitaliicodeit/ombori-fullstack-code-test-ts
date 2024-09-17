@@ -1,0 +1,50 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.Loader {
+  $maxSize: 200px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $maxSize;
+  width: $maxSize;
+
+  &__Outer, &__Inner, &__Core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $mainGreen;
+  }
+
+  &__Core {
+    $size: 1.6rem;
+
+    height: $size;
+    width: $size;
+  }
+
+
+  &__Inner, &__Outer {
+    $initialSize: 6.4rem;
+    $opacityFrom: 0.2;
+
+    height: $initialSize;
+    width: $initialSize;
+    opacity: $opacityFrom;
+
+    @include pulseAnimation($initialSize, $maxSize, $opacityFrom, 0.005);
+  }
+
+  &__Inner {
+    animation: pulse 2.3s linear 0.2s infinite;
+  }
+
+  &__Outer {
+
+    animation: pulse 3.3s linear 0.8s infinite;
+  }
+}

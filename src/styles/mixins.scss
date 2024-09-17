@@ -1,0 +1,14 @@
+@mixin pulseAnimation($initialSize, $expandedSize, $opacityFrom, $opacityTo) {
+  @keyframes pulse {
+    0% {
+      width: $initialSize;
+      height: $initialSize;
+      opacity: $opacityFrom;
+    }
+    100% {
+      width: $expandedSize;
+      height: $expandedSize;
+      opacity: $opacityTo;
+    }
+  }
+}
