@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { v4 } from 'uuid';
 
 import { getUserRequest } from '../api/users/get-user.request';
@@ -25,17 +25,11 @@ export const useGetUsers = (): IUseGetUsersHook => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const [nextPage, setNextPage] = useState<number>(1);
-
   const [items, setItems] = useState<IUserData[]>([]);
 
   const requestUuidRef = useRef<string>(v4());
 
-  const nextPageRef = useRef<number>(nextPage);
-
-  useEffect(() => {
-    nextPageRef.current = nextPage;
-  }, [nextPage]);
+  const nextPageRef = useRef<number>(1);
 
   const getNext = useCallback(async () => {
     const requestUuid = v4();
@@ -61,8 +55,10 @@ export const useGetUsers = (): IUseGetUsersHook => {
       setHasMore(false);
     } else {
       setHasMore(true);
+
       setItems((prevState) => [...prevState, ...response.data]);
-      setNextPage(response.page + 1);
+
+      nextPageRef.current = response.page + 1;
     }
 
     setIsFulfilled(true);
